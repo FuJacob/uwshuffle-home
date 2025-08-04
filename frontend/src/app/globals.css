@@ -1,9 +1,10 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Outfit:wght@100..900&display=swap");
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-    --color-gray-200: #e2e8f0;
+  --color-gray-200: #e2e8f0;
   --color-gray-300: #cbd5e1;
 
   /* Colors - Professional UWShuffle brand palette */
@@ -38,7 +39,6 @@
   --color-error-hover: #b91c1c;
   --color-error-hover-bg: #fecaca;
   --color-error-hover-border: #f87171;
-
 }
 
 @theme inline {
@@ -68,10 +68,44 @@
   --color-error-hover: var(--color-error-hover);
   --color-error-hover-bg: var(--color-error-hover-bg);
   --color-error-hover-border: var(--color-error-hover-border);
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-hover: #334155;
+  --color-border: #475569;
+  --color-border-focus: #3b82f6;
+
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-tertiary: #64748b;
+
+  /* Brand Colors - Professional Blue Theme */
+  --color-primary: #60a5fa; /* Blue 400 - 4.8:1 contrast */
+  --color-primary-hover: #3b82f6; /* Blue 500 */
+  --color-primary-dark: #2563eb; /* Blue 600 - darker for borders */
+  --color-primary-light: #1e293b;
+  --color-primary-alpha: rgba(96, 165, 250, 0.1); /* Primary with alpha */
+
+  /* Status Colors - WCAG AA Compliant */
+  --color-success: #34d399; /* Green 400 - 4.9:1 contrast */
+  --color-success-hover: #10b981; /* Green 500 */
+  --color-success-light: #064e3b;
+
+  --color-warning: #fbbf24; /* Amber 400 - 4.7:1 contrast */
+  --color-warning-light: #451a03;
+
+  --color-error: #f87171; /* Red 400 - 4.6:1 contrast */
+  --color-error-light: #450a0a;
+  --color-error-border: #7f1d1d;
+  --color-error-hover: #ef4444;
+  --color-error-hover-bg: #450a0a;
+  --color-error-hover-border: #7f1d1d;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,5 +118,113 @@
 body {
   background: var(--color-background);
   color: var(--color-text-primary);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Gabarito", sans-serif;
+}
+
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delayed-2 {
+  animation: fade-in 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delayed-3 {
+  animation: fade-in 0.6s ease-out 1.8s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-slide-up-delayed {
+  animation: slide-up 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up-delayed-2 {
+  animation: slide-up 0.8s ease-out 0.9s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-scale-in-delayed {
+  animation: scale-in 0.8s ease-out 1.1s forwards;
+  opacity: 0;
 }
