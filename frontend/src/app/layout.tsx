@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
-import { Lexend, Hanken_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const lexend = Lexend({
-  variable: "--font-lexend",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const hankenGrotesk = Hanken_Grotesk({
-  variable: "--font-hanken-grotesk",
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "UWShuffle - Quest Class Schedule Helper",
+  title: "UWShuffle - Quest. But Actually Usable.",
   description:
-    "Preview class conflicts when swapping courses in the University of Waterloo Quest portal",
+    "The Chrome extension that transforms your UW course registration experience. No more refreshing, no more stress. Just seamless course selection.",
+  keywords:
+    "UW, University of Washington, course registration, Quest, Chrome extension, UWShuffle",
+  authors: [{ name: "UWShuffle Team" }],
+  openGraph: {
+    title: "UWShuffle - Quest. But Actually Usable.",
+    description:
+      "The Chrome extension that transforms your UW course registration experience.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,7 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lexend.variable} ${hankenGrotesk.variable} antialiased`}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
