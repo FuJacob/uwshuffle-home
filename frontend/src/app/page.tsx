@@ -185,7 +185,7 @@ export default function Home() {
 
         <section className="flex flex-col items-center justify-center w-full py-16 animate-slide-up">
           <p className="text-2xl mb-4 text-text-secondary animate-fade-in-delayed">
-            Tired of Quest's frustrating class swapping experience?
+            Tired of Quest&apos;s frustrating class swapping experience?
           </p>
           <button
             type="button"
