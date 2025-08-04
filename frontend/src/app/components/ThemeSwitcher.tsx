@@ -32,7 +32,7 @@ export default function ThemeSwitcher() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 z-50 p-3 rounded-full bg-surface hover:bg-surface-hover transition-colors text-text-primary border border-border"
+      className="p-3 rounded-full bg-surface hover:bg-surface-hover transition-colors text-text-primary border border-border"
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       {theme === "light" ? (
