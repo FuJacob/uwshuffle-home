@@ -107,7 +107,7 @@ export default function Home() {
         className="absolute inset-0 z-0"
         style={{
           background:
-            "radial-gradient(125% 125% at 50% 90%, #fff 40%, var(--color-primary) 100%)",
+            "radial-gradient(125% 125% at 50% 70%, #fff 40%, var(--color-primary) 100%)",
           filter: "blur(80px)",
           backgroundRepeat: "no-repeat",
         }}
@@ -144,11 +144,11 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center animate-slide-up px-4">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-delayed text-center w-full">
             <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl xl:text-3xl tracking-tight leading-tight px-2 sm:px-4 max-w-4xl">
-              Using{" "}
-              <span className="font-display font-black tracking-wide">
+              Using uWaterloo's{" "}
+              <span className="font-display font-black tracking-wide mx-1">
                 Quest
               </span>{" "}
-              is like waiting in line for Tim&apos;s coffee at SLC.
+              is like waiting in line for Timmies at SLC.
             </p>
             <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-text-primary leading-none tracking-tighter px-2 sm:px-4">
               UW <span>Shuffle</span> is you <br /> skipping the line.
@@ -255,7 +255,7 @@ export default function Home() {
               </button>
             </div>
           </section>
-          <footer className="py-6 sm:py-8 animate-slide-up max-w-7xl mx-auto px-4 sm:px-6">
+          <footer className="py-6 sm:py-8 animate-slide-up max-w-7xl mx-auto px-4 sm:px-6 w-full">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 sm:gap-3">
                 <Image
@@ -270,26 +270,10 @@ export default function Home() {
                 </h4>
               </div>
 
-              <div className="flex items-center gap-3 sm:gap-4">
-                <a
-                  href="#"
-                  className="uwshuffle-button-secondary text-lg sm:text-xl p-2"
-                  aria-label="Follow UW Shuffle on X (Twitter)"
-                >
-                  <FaTwitter />
-                </a>
-                <a
-                  href="#"
-                  className="uwshuffle-button-secondary text-lg sm:text-xl p-2"
-                  aria-label="Contact UW Shuffle via Email"
-                >
-                  <FaEnvelope />
-                </a>
-                <p className="text-xs sm:text-sm text-text-secondary">
-                  &copy; {new Date().getFullYear()} UW Shuffle. All rights
-                  reserved.
-                </p>
-              </div>
+              <p className="text-xs sm:text-sm text-text-secondary">
+                &copy; {new Date().getFullYear()} UW Shuffle. All rights
+                reserved.
+              </p>
             </div>
           </footer>
         </div>
