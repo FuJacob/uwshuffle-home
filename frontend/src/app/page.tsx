@@ -102,44 +102,40 @@ const FeatureCard = ({
 export default function Home() {
   const headlines = [
     {
-      subtext: "Quest is losing your WatCard before exams.",
-      headline: "UW Shuffle is finding it before your morning coffee run.",
+      subtext: "If Quest is roommate having loud sex at 3 a.m.",
+      headline: "Then UW Shuffle is AirPods Pro 2.",
     },
     {
-      subtext: "Quest is walking from V1 to E7 in January.",
-      headline: "UW Shuffle is getting a ride.",
+      subtext: "If Quest is eating 6 lines of Lazeez.",
+      headline: "Then UW Shuffle is the bathrooms at E7.",
     },
     {
-      subtext: "Quest is getting matched with your ex on Tinder.",
-      headline: "UW Shuffle is super-liking someone better.",
+      subtext: "If Quest is mandatory PD coursework.",
+      headline: "Then UW Shuffle is GPT Deep Research.",
     },
     {
-      subtext: "Quest is getting roasted by a goose.",
-      headline: "UW Shuffle is roasting the goose back.",
+      subtext: "If Quest is low GPA post-St. Paddy’s.",
+      headline: "Then UW Shuffle is professor curving final.",
     },
     {
-      subtext: "Quest is missing the 202 and waiting an hour.",
-      headline: "UW Shuffle is your Uber pulling up instantly.",
+      subtext: "If Quest is a goose attacking you outside MC.",
+      headline: "Then UW Shuffle is a coyote eating goose.",
     },
     {
-      subtext: "Quest is your GPA after midterms.",
-      headline: "UW Shuffle is the curve that saves your ass.",
+      subtext: "If Quest is no offers on WaterlooWorks.",
+      headline: "Then UW Shuffle is the external offer.",
     },
     {
-      subtext: "Quest is a roommate who never showers.",
-      headline: "UW Shuffle is rooming with someone who smells normal.",
+      subtext: "If Quest is waiting in line for morning SLC Timmies.",
+      headline: "Then UW Shuffle is skipping the line.",
     },
     {
-      subtext: "Quest is your laptop dying mid-lecture.",
-      headline: "UW Shuffle is the TA lending you their charger.",
+      subtext: "If Quest is forgetting your WatCard for your exam.",
+      headline: "Then UW Shuffle is the professor letting you in.",
     },
     {
-      subtext: "Quest is getting locked out at 2 am.",
-      headline: "UW Shuffle is someone letting you in immediately.",
-    },
-    {
-      subtext: "Quest is an 8:30 lecture on Friday.",
-      headline: "UW Shuffle is getting that class canceled.",
+      subtext: "If Quest is Tinder date ghosting you.",
+      headline: "Then UW Shuffle is matching their friend.",
     },
   ];
 
