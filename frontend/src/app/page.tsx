@@ -113,7 +113,7 @@ export default function Home() {
         }}
       />
 
-      <nav className="uwshuffle-glass-card flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 animate-fade-in rounded-full w-fit mx-auto">
+      <nav className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 animate-fade-in max-w-7xl mx-auto">
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="hover:scale-110 transition-transform duration-300 ease-spring">
             <Image
@@ -127,6 +127,16 @@ export default function Home() {
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary animate-fade-in-delayed">
             UW Shuffle
           </h1>
+        </div>
+        <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed">
+          <button
+            type="button"
+            className="bg-surface flex items-center gap-1  text-text-primary  rounded-full text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2"
+            aria-label="Add UW Shuffle to Chrome - it's free"
+          >
+            <FaChrome className="text-base sm:text-lg" />
+            Add to Chrome
+          </button>
         </div>
       </nav>
 
@@ -229,15 +239,9 @@ export default function Home() {
           </div>
           <section className="flex flex-col items-center justify-center w-full py-8 sm:py-12 lg:py-16 animate-slide-up px-4">
             <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-delayed text-center">
-              <p className="text-text-secondary text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-tight leading-none px-4">
-                <span className="font-display font-black tracking-wide">
-                  Quest
-                </span>{" "}
-                is the girl who left you
-              </p>
               <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-black leading-none tracking-tighter px-4">
-                UW Shuffle is the <br />
-                Bugatti that brings her back.
+                It&apos;s time to stop getting <br />
+                trauma from Quest.
               </h2>
             </div>
             <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed-2">
@@ -252,8 +256,8 @@ export default function Home() {
             </div>
           </section>
           <footer className="py-6 sm:py-8 animate-slide-up max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
-              <div className="uwshuffle-glass-card flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-full">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <Image
                   src="/logo.svg"
                   alt="UW Shuffle"
@@ -266,7 +270,7 @@ export default function Home() {
                 </h4>
               </div>
 
-              <div className="uwshuffle-glass-card flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 rounded-full">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <a
                   href="#"
                   className="uwshuffle-button-secondary text-lg sm:text-xl p-2"
@@ -282,7 +286,8 @@ export default function Home() {
                   <FaEnvelope />
                 </a>
                 <p className="text-xs sm:text-sm text-text-secondary">
-                  &copy; 2024 UW Shuffle. All rights reserved.
+                  &copy; {new Date().getFullYear()} UW Shuffle. All rights
+                  reserved.
                 </p>
               </div>
             </div>
