@@ -6,7 +6,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaChrome,
-  FaCoffee,
+  FaEnvelope,
 } from "react-icons/fa";
 
 interface Feature {
@@ -69,7 +69,7 @@ const FeatureCard = ({
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl hover:scale-105 transition-transform duration-300"
+          className="w-3/5 h-auto rounded-xl"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
         <div className="flex flex-col w-2/5 px-8 hover:-translate-y-2 transition-transform duration-300">
@@ -98,7 +98,7 @@ const FeatureCard = ({
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl hover:scale-105 transition-transform duration-300"
+          className="w-3/5 h-auto rounded-xl"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
       </article>
@@ -137,15 +137,18 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="flex flex-col items-center px-6 pt-42  ">
-        <section className="flex flex-col items-center justify-center max-w-5xl mx-auto text-center py-12 animate-slide-up">
+      <main className="flex flex-col items-center px-6 pt-56  ">
+        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto text-center animate-slide-up">
           <div className="flex flex-col items-center justify-center gap-6 mb-12 animate-fade-in-delayed">
-            <p className="text-text-secondary text-3xl font-bold">
-              <span className="font-display font-bold">Quest</span> is the
-              morning <FaCoffee className="inline text-2xl" /> Tim&apos;s wait.
+            <p className="text-text-secondary text-4xl tracking-tight leading-none">
+              Using{" "}
+              <span className="font-display font-black tracking-wide">
+                Quest
+              </span>{" "}
+              is like waiting in line for Tim&apos;s coffee at SLC.
             </p>
-            <h2 className="text-9xl font-bold text-black leading-none tracking-tighter">
-              UW Shuffle skips <br /> the f**king line.
+            <h2 className="text-9xl font-bold text-text-primary leading-none tracking-tight">
+              UW <span>Shuffle</span> is you <br /> skipping the line.
             </h2>
           </div>
           <div className="flex flex-row items-center justify-between max-w-7xl w-full gap-10">
@@ -195,7 +198,7 @@ export default function Home() {
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className={`animate-slide-up hover:-translate-y-2 transition-transform duration-300`}
+              className={`animate-slide-up`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <FeatureCard feature={feature} index={index} />
@@ -232,68 +235,62 @@ export default function Home() {
             </div>
           </div>
           <section className="flex flex-col items-center justify-center w-full py-16 animate-slide-up">
-            <p className="text-2xl mb-4 text-text-secondary animate-fade-in-delayed">
-              Tired of Quest&apos;s frustrating class swapping experience?
-            </p>
-            <button
-              type="button"
-              className="uwshuffle-button-primary text-2xl px-8 py-4 animate-fade-in-delayed-2"
-              aria-label="Add UW Shuffle to Chrome - it's free"
-            >
-              <FaChrome className="text-2xl" />
-              Add to Chrome - it&apos;s free
-            </button>
+            <div className="flex flex-col items-center justify-center gap-6 mb-12 animate-fade-in-delayed text-center">
+              <p className="text-text-secondary text-5xl tracking-tight leading-none">
+                <span className="font-display font-black tracking-wide">
+                  Quest
+                </span>{" "}
+                is the girl who left you
+              </p>
+              <h2 className="text-9xl font-bold text-black leading-none tracking-tighter">
+                UW Shuffle is the <br />
+                Bugatti that brings her back.
+              </h2>
+            </div>
+            <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed-2">
+              <button
+                type="button"
+                className="uwshuffle-button-primary text-2xl px-8 py-4"
+                aria-label="Add UW Shuffle to Chrome - it's free"
+              >
+                <FaChrome className="text-2xl" />
+                Add to Chrome - it&apos;s free
+              </button>
+            </div>
           </section>
-          <footer className="py-12 animate-slide-up">
-            <div className="max-w-7xl mx-auto px-6">
-              <div className="uwshuffle-card p-8">
-                <div className="flex justify-between items-start">
-                  <div className="flex flex-col animate-slide-in-left">
-                    <h4 className="text-2xl font-bold mb-4 text-text-primary">
-                      UW Shuffle
-                    </h4>
-                    <p className="text-lg text-text-secondary">
-                      The Chrome extension that revolutionizes class swapping on
-                      Quest.
-                    </p>
-                  </div>
+          <footer className="py-8 animate-slide-up max-w-7xl mx-auto px-6">
+            <div className="flex justify-between items-center gap-6">
+              <div className="uwshuffle-glass-card flex items-center gap-3 px-6 py-4 rounded-full">
+                <Image
+                  src="/logo.svg"
+                  alt="UW Shuffle"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 rounded-2xl"
+                />
+                <h4 className="text-xl font-bold text-text-primary">
+                  UW Shuffle
+                </h4>
+              </div>
 
-                  <div className="flex flex-col items-end animate-slide-in-right">
-                    <div className="flex space-x-6 mb-4">
-                      {[
-                        {
-                          icon: FaGithub,
-                          label: "Visit UW Shuffle GitHub repository",
-                        },
-                        {
-                          icon: FaDiscord,
-                          label: "Join UW Shuffle Discord community",
-                        },
-                        {
-                          icon: FaTwitter,
-                          label: "Follow UW Shuffle on Twitter",
-                        },
-                        {
-                          icon: FaLinkedin,
-                          label: "Connect with UW Shuffle on LinkedIn",
-                        },
-                      ].map((social, index) => (
-                        <a
-                          key={index}
-                          href="#"
-                          className="uwshuffle-button-secondary text-3xl p-3"
-                          aria-label={social.label}
-                          style={{ animationDelay: `${1.4 + index * 0.1}s` }}
-                        >
-                          <social.icon />
-                        </a>
-                      ))}
-                    </div>
-                    <p className="text-lg text-text-secondary animate-fade-in-delayed-3">
-                      &copy; 2024 UW Shuffle. All rights reserved.
-                    </p>
-                  </div>
-                </div>
+              <div className="uwshuffle-glass-card flex items-center gap-4 px-6 py-4 rounded-full">
+                <a
+                  href="#"
+                  className="uwshuffle-button-secondary text-xl p-2"
+                  aria-label="Follow UW Shuffle on X (Twitter)"
+                >
+                  <FaTwitter />
+                </a>
+                <a
+                  href="#"
+                  className="uwshuffle-button-secondary text-xl p-2"
+                  aria-label="Contact UW Shuffle via Email"
+                >
+                  <FaEnvelope />
+                </a>
+                <p className="text-sm text-text-secondary">
+                  &copy; 2024 UW Shuffle. All rights reserved.
+                </p>
               </div>
             </div>
           </footer>
