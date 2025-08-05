@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaTwitter, FaChrome, FaEnvelope } from "react-icons/fa";
+import { FaChrome } from "react-icons/fa";
 
 interface Feature {
   id: number;
@@ -100,6 +100,52 @@ const FeatureCard = ({
 };
 
 export default function Home() {
+  const headlines = [
+    {
+      subtext: "Quest is losing your WatCard before exams.",
+      headline: "UW Shuffle is finding it before your morning coffee run.",
+    },
+    {
+      subtext: "Quest is walking from V1 to E7 in January.",
+      headline: "UW Shuffle is getting a ride.",
+    },
+    {
+      subtext: "Quest is getting matched with your ex on Tinder.",
+      headline: "UW Shuffle is super-liking someone better.",
+    },
+    {
+      subtext: "Quest is getting roasted by a goose.",
+      headline: "UW Shuffle is roasting the goose back.",
+    },
+    {
+      subtext: "Quest is missing the 202 and waiting an hour.",
+      headline: "UW Shuffle is your Uber pulling up instantly.",
+    },
+    {
+      subtext: "Quest is your GPA after midterms.",
+      headline: "UW Shuffle is the curve that saves your ass.",
+    },
+    {
+      subtext: "Quest is a roommate who never showers.",
+      headline: "UW Shuffle is rooming with someone who smells normal.",
+    },
+    {
+      subtext: "Quest is your laptop dying mid-lecture.",
+      headline: "UW Shuffle is the TA lending you their charger.",
+    },
+    {
+      subtext: "Quest is getting locked out at 2 am.",
+      headline: "UW Shuffle is someone letting you in immediately.",
+    },
+    {
+      subtext: "Quest is an 8:30 lecture on Friday.",
+      headline: "UW Shuffle is getting that class canceled.",
+    },
+  ];
+
+  const randomHeadline =
+    headlines[Math.floor(Math.random() * headlines.length)];
+
   return (
     <div className="min-h-screen w-full relative bg-white pt-8">
       {/* Cool Blue Glow Top */}
@@ -144,14 +190,10 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center animate-slide-up px-4">
           <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-delayed text-center w-full">
             <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl xl:text-3xl tracking-tight leading-tight px-2 sm:px-4 max-w-4xl">
-              Using uWaterloo's{" "}
-              <span className="font-display font-black tracking-wide mx-1">
-                Quest
-              </span>{" "}
-              is like waiting in line for Timmies at SLC.
+              {randomHeadline.subtext}
             </p>
             <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-text-primary leading-none tracking-tighter px-2 sm:px-4">
-              UW <span>Shuffle</span> is you <br /> skipping the line.
+              {randomHeadline.headline}
             </h2>
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl w-full gap-6 lg:gap-10 px-4">

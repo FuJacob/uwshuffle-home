@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Gabarito, Outfit, Anton } from "next/font/google";
+import { Gabarito, Outfit } from "next/font/google";
 import "./globals.css";
 
 const gabarito = Gabarito({
@@ -10,12 +10,6 @@ const gabarito = Gabarito({
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-});
-
-const anton = Anton({
-  variable: "--font-anton",
-  subsets: ["latin"],
-  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -40,9 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${gabarito.variable} ${outfit.variable} ${anton.variable}  antialiased`}
-      >
+      <body className={`${gabarito.variable} ${outfit.variable} antialiased`}>
         {children}
       </body>
     </html>
