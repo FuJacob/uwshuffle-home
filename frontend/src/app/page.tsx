@@ -56,20 +56,20 @@ const FeatureCard = ({
 }) => {
   if (index % 2 !== 0) {
     return (
-      <article className="flex flex-row items-center justify-center w-full ">
+      <article className="flex flex-col lg:flex-row items-center justify-center w-full mb-8 sm:mb-16 p-4 sm:p-8 gap-6 lg:gap-0">
         <Image
           src={feature.image}
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl"
+          className="w-full lg:w-3/5 h-auto rounded-xl order-1 lg:order-none"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
-        <div className="flex flex-col w-2/5 px-8 hover:-translate-y-2 transition-transform duration-300">
-          <h3 className="text-5xl font-bold mb-4 text-text-primary">
+        <div className="flex flex-col w-full lg:w-2/5 px-4 lg:px-8 text-center lg:text-left hover:-translate-y-2 transition-transform duration-300 order-2 lg:order-none">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
             {feature.title}
           </h3>
-          <p className="text-2xl text-text-secondary whitespace-pre-line">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary whitespace-pre-line">
             {feature.description}
           </p>
         </div>
@@ -77,12 +77,12 @@ const FeatureCard = ({
     );
   } else {
     return (
-      <article className="flex flex-row items-center justify-center w-full mb-16 p-8">
-        <div className="flex flex-col w-2/5 px-8 hover:-translate-y-2 transition-transform duration-300">
-          <h3 className="text-5xl font-bold mb-4 text-text-primary">
+      <article className="flex flex-col lg:flex-row items-center justify-center w-full mb-8 sm:mb-16 p-4 sm:p-8 gap-6 lg:gap-0">
+        <div className="flex flex-col w-full lg:w-2/5 px-4 lg:px-8 text-center lg:text-left hover:-translate-y-2 transition-transform duration-300 order-2 lg:order-1">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-text-primary">
             {feature.title}
           </h3>
-          <p className="text-2xl text-text-secondary whitespace-pre-line">
+          <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary whitespace-pre-line">
             {feature.description}
           </p>
         </div>
@@ -91,7 +91,7 @@ const FeatureCard = ({
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl"
+          className="w-full lg:w-3/5 h-auto rounded-xl order-1 lg:order-2"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
       </article>
@@ -113,70 +113,70 @@ export default function Home() {
         }}
       />
 
-      <nav className="uwshuffle-glass-card flex items-center justify-center px-6 py-4 animate-fade-in rounded-full w-fit mx-auto">
-        <div className="flex items-center gap-3">
+      <nav className="uwshuffle-glass-card flex items-center justify-center px-4 sm:px-6 py-3 sm:py-4 animate-fade-in rounded-full w-fit mx-auto">
+        <div className="flex items-center gap-2 sm:gap-3">
           <div className="hover:scale-110 transition-transform duration-300 ease-spring">
             <Image
               src="/logo.svg"
               alt="UW Shuffle"
               width={40}
               height={40}
-              className="w-10 h-10 rounded-3xl"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-3xl"
             />
           </div>
-          <h1 className="text-3xl font-bold text-text-primary animate-fade-in-delayed">
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary animate-fade-in-delayed">
             UW Shuffle
           </h1>
         </div>
       </nav>
 
-      <main className="flex flex-col items-center px-6 pt-56  ">
-        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto text-center animate-slide-up">
-          <div className="flex flex-col items-center justify-center gap-6 mb-12 animate-fade-in-delayed">
-            <p className="text-text-secondary text-4xl tracking-tight leading-none">
+      <main className="flex flex-col items-center px-4 sm:px-6 pt-32 sm:pt-40 lg:pt-56">
+        <section className="flex flex-col items-center justify-center w-full max-w-7xl mx-auto text-center animate-slide-up px-4">
+          <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-delayed text-center w-full">
+            <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl xl:text-3xl tracking-tight leading-tight px-2 sm:px-4 max-w-4xl">
               Using{" "}
               <span className="font-display font-black tracking-wide">
                 Quest
               </span>{" "}
               is like waiting in line for Tim&apos;s coffee at SLC.
             </p>
-            <h2 className="text-9xl font-bold text-text-primary leading-none tracking-tight">
+            <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-text-primary leading-none tracking-tighter px-2 sm:px-4">
               UW <span>Shuffle</span> is you <br /> skipping the line.
             </h2>
           </div>
-          <div className="flex flex-row items-center justify-between max-w-7xl w-full gap-10">
-            <div className="flex justify-center flex-1">
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-left transform rotate-6 whitespace-nowrap">
+          <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl w-full gap-6 lg:gap-10 px-4">
+            <div className="flex justify-center flex-1 order-2 lg:order-1">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-left transform rotate-3 lg:rotate-6 whitespace-nowrap">
                 Plan with friends
               </span>
             </div>
 
-            <div className="flex flex-col items-center gap-6">
+            <div className="flex flex-col items-center gap-4 sm:gap-6 order-1 lg:order-2">
               <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed">
                 <button
                   type="button"
-                  className="uwshuffle-button-primary text-4xl px-8 py-6"
+                  className="uwshuffle-button-primary text-2xl sm:text-3xl lg:text-4xl px-6 sm:px-8 py-4 sm:py-6"
                   aria-label="Add UW Shuffle to Chrome - it's free"
                 >
-                  <FaChrome className="text-2xl" />
+                  <FaChrome className="text-xl sm:text-2xl" />
                   Add to Chrome - it&apos;s free
                 </button>
               </div>
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap">
                 Preview every swap
               </span>
             </div>
 
-            <div className="flex justify-center flex-1">
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-right transform -rotate-6 whitespace-nowrap">
+            <div className="flex justify-center flex-1 order-3">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-right transform -rotate-3 lg:-rotate-6">
                 Dodge bad profs
               </span>
             </div>
           </div>
         </section>
 
-        <div className="px-36 relative z-10">
-          <div className="w-full mx-auto my-12 overflow-hidden shadow-lg rounded-3xl">
+        <div className="px-4 sm:px-8 lg:px-36 relative z-10">
+          <div className="w-full mx-auto my-8 sm:my-12 overflow-hidden shadow-lg rounded-2xl lg:rounded-3xl">
             <video
               src="/uwshuffle-demo.mp4"
               autoPlay
@@ -187,7 +187,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-16 animate-fade-in">
+        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-8 sm:py-16 animate-fade-in px-4">
           {features.map((feature, index) => (
             <div
               key={feature.id}
@@ -198,7 +198,7 @@ export default function Home() {
             </div>
           ))}
         </section>
-        <div className="min-h-screen relative flex flex-col items-center justify-center w-screen  animate-fade-in">
+        <div className="min-h-screen relative flex flex-col items-center justify-center w-screen animate-fade-in">
           {/* Radial Gradient Background */}
           <div
             className="absolute inset-0 z-0"
@@ -208,34 +208,34 @@ export default function Home() {
             }}
           />
 
-          <div className=" flex flex-col items-center justify-center p-12 mx-8 ">
-            <h3 className="text-7xl font-bold mb-6 text-text-primary animate-slide-up-delayed">
+          <div className="flex flex-col items-center justify-center p-6 sm:p-8 lg:p-12 mx-4 sm:mx-8">
+            <h3 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-text-primary animate-slide-up-delayed text-center px-4">
               &ldquo;UWShuffle saved me hours of course planning!&rdquo;
             </h3>
-            <p className="text-2xl mb-6 text-text-secondary animate-slide-up-delayed-2">
+            <p className="text-lg sm:text-xl lg:text-2xl mb-4 sm:mb-6 text-text-secondary animate-slide-up-delayed-2 text-center px-4">
               Join thousands of UW students who have transformed their Quest
               experience with instant conflict detection and professor insights.
             </p>
-            <div className="uwshuffle-card p-4 relative z-10">
+            <div className="uwshuffle-card p-2 sm:p-4 relative z-10">
               <Image
                 src="/sidebar.png"
                 alt="UW Shuffle sidebar interface"
                 width={1000}
                 height={1000}
-                className="w-full max-w-lg"
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg"
                 style={{ borderRadius: "var(--radius-md)" }}
               />
             </div>
           </div>
-          <section className="flex flex-col items-center justify-center w-full py-16 animate-slide-up">
-            <div className="flex flex-col items-center justify-center gap-6 mb-12 animate-fade-in-delayed text-center">
-              <p className="text-text-secondary text-5xl tracking-tight leading-none">
+          <section className="flex flex-col items-center justify-center w-full py-8 sm:py-12 lg:py-16 animate-slide-up px-4">
+            <div className="flex flex-col items-center justify-center gap-4 sm:gap-6 mb-8 sm:mb-12 animate-fade-in-delayed text-center">
+              <p className="text-text-secondary text-2xl sm:text-3xl lg:text-4xl xl:text-5xl tracking-tight leading-none px-4">
                 <span className="font-display font-black tracking-wide">
                   Quest
                 </span>{" "}
                 is the girl who left you
               </p>
-              <h2 className="text-9xl font-bold text-black leading-none tracking-tighter">
+              <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-black leading-none tracking-tighter px-4">
                 UW Shuffle is the <br />
                 Bugatti that brings her back.
               </h2>
@@ -243,45 +243,45 @@ export default function Home() {
             <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed-2">
               <button
                 type="button"
-                className="uwshuffle-button-primary text-2xl px-8 py-4"
+                className="uwshuffle-button-primary text-xl sm:text-2xl px-6 sm:px-8 py-3 sm:py-4"
                 aria-label="Add UW Shuffle to Chrome - it's free"
               >
-                <FaChrome className="text-2xl" />
+                <FaChrome className="text-xl sm:text-2xl" />
                 Add to Chrome - it&apos;s free
               </button>
             </div>
           </section>
-          <footer className="py-8 animate-slide-up max-w-7xl mx-auto px-6">
-            <div className="flex justify-between items-center gap-6">
-              <div className="uwshuffle-glass-card flex items-center gap-3 px-6 py-4 rounded-full">
+          <footer className="py-6 sm:py-8 animate-slide-up max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+              <div className="uwshuffle-glass-card flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-full">
                 <Image
                   src="/logo.svg"
                   alt="UW Shuffle"
                   width={32}
                   height={32}
-                  className="w-8 h-8 rounded-2xl"
+                  className="w-6 h-6 sm:w-8 sm:h-8 rounded-2xl"
                 />
-                <h4 className="text-xl font-bold text-text-primary">
+                <h4 className="text-lg sm:text-xl font-bold text-text-primary">
                   UW Shuffle
                 </h4>
               </div>
 
-              <div className="uwshuffle-glass-card flex items-center gap-4 px-6 py-4 rounded-full">
+              <div className="uwshuffle-glass-card flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 rounded-full">
                 <a
                   href="#"
-                  className="uwshuffle-button-secondary text-xl p-2"
+                  className="uwshuffle-button-secondary text-lg sm:text-xl p-2"
                   aria-label="Follow UW Shuffle on X (Twitter)"
                 >
                   <FaTwitter />
                 </a>
                 <a
                   href="#"
-                  className="uwshuffle-button-secondary text-xl p-2"
+                  className="uwshuffle-button-secondary text-lg sm:text-xl p-2"
                   aria-label="Contact UW Shuffle via Email"
                 >
                   <FaEnvelope />
                 </a>
-                <p className="text-sm text-text-secondary">
+                <p className="text-xs sm:text-sm text-text-secondary">
                   &copy; 2024 UW Shuffle. All rights reserved.
                 </p>
               </div>

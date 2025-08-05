@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -110,7 +109,6 @@
   --font-mono: var(--font-geist-mono);
   --font-display: "Anton", sans-serif;
 }
-
 
 body {
   background: var(--color-background);
@@ -261,8 +259,20 @@ body {
 
 .uwshuffle-button-gradient-bg {
   position: relative;
-  padding: 20px;
+  padding: 12px;
   border-radius: var(--radius-full);
+}
+
+@media (min-width: 640px) {
+  .uwshuffle-button-gradient-bg {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .uwshuffle-button-gradient-bg {
+    padding: 20px;
+  }
 }
 
 .uwshuffle-button-gradient-bg::before {
