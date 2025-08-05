@@ -1,13 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {
-  FaGithub,
-  FaDiscord,
-  FaTwitter,
-  FaLinkedin,
-  FaChrome,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaTwitter, FaChrome, FaEnvelope } from "react-icons/fa";
 
 interface Feature {
   id: number;
