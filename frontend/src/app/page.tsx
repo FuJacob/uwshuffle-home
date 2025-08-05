@@ -8,7 +8,6 @@ import {
   FaChrome,
   FaCoffee,
 } from "react-icons/fa";
-import ThemeSwitcher from "./components/ThemeSwitcher";
 
 interface Feature {
   id: number;
@@ -70,14 +69,14 @@ const FeatureCard = ({
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl"
+          className="w-3/5 h-auto rounded-xl hover:scale-105 transition-transform duration-300"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
-        <div className="flex flex-col w-2/5 px-8">
+        <div className="flex flex-col w-2/5 px-8 hover:-translate-y-2 transition-transform duration-300">
           <h3 className="text-5xl font-bold mb-4 text-text-primary">
             {feature.title}
           </h3>
-          <p className="text-2xl text-text-secondary whitespace-pre-line uwshuffle-glass-card px-6 py-4 rounded-xl">
+          <p className="text-2xl text-text-secondary whitespace-pre-line">
             {feature.description}
           </p>
         </div>
@@ -86,11 +85,11 @@ const FeatureCard = ({
   } else {
     return (
       <article className="flex flex-row items-center justify-center w-full mb-16 p-8">
-        <div className="flex flex-col w-2/5 px-8">
+        <div className="flex flex-col w-2/5 px-8 hover:-translate-y-2 transition-transform duration-300">
           <h3 className="text-5xl font-bold mb-4 text-text-primary">
             {feature.title}
           </h3>
-          <p className="text-2xl text-text-secondary whitespace-pre-line uwshuffle-glass-card px-6 py-4 rounded-xl">
+          <p className="text-2xl text-text-secondary whitespace-pre-line">
             {feature.description}
           </p>
         </div>
@@ -99,7 +98,7 @@ const FeatureCard = ({
           alt={feature.title}
           width={800}
           height={600}
-          className="w-3/5 h-auto rounded-xl"
+          className="w-3/5 h-auto rounded-xl hover:scale-105 transition-transform duration-300"
           style={{ borderRadius: "var(--radius-lg)" }}
         />
       </article>
@@ -114,20 +113,14 @@ export default function Home() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          background: "#ffffff",
-          backgroundImage: `
-        radial-gradient(
-          circle at top center,
-          rgba(70, 130, 180, 0.5),
-          transparent 70%
-        )
-      `,
+          background:
+            "radial-gradient(125% 125% at 50% 90%, #fff 40%, var(--color-primary) 100%)",
           filter: "blur(80px)",
           backgroundRepeat: "no-repeat",
         }}
       />
 
-      <nav className="uwshuffle-glass-card flex items-center justify-between px-6 py-4 animate-fade-in max-w-7xl mx-auto rounded-full">
+      <nav className="uwshuffle-glass-card flex items-center justify-center px-6 py-4 animate-fade-in rounded-full w-fit mx-auto">
         <div className="flex items-center gap-3">
           <div className="hover:scale-110 transition-transform duration-300 ease-spring">
             <Image
@@ -142,7 +135,6 @@ export default function Home() {
             UW Shuffle
           </h1>
         </div>
-        <ThemeSwitcher />
       </nav>
 
       <main className="flex flex-col items-center px-6 pt-42  ">
@@ -158,27 +150,29 @@ export default function Home() {
           </div>
           <div className="flex flex-row items-center justify-between max-w-7xl w-full gap-10">
             <div className="flex justify-center flex-1">
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-4 transform rotate-6 whitespace-nowrap">
+              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-left transform rotate-6 whitespace-nowrap">
                 Plan with friends
               </span>
             </div>
 
             <div className="flex flex-col items-center gap-6">
-              <button
-                type="button"
-                className="uwshuffle-button-primary text-4xl px-8 py-6 animate-fade-in-delayed-2"
-                aria-label="Add UW Shuffle to Chrome - it's free"
-              >
-                <FaChrome className="text-2xl" />
-                Add to Chrome - it&apos;s free
-              </button>
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-3 whitespace-nowrap">
+              <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed">
+                <button
+                  type="button"
+                  className="uwshuffle-button-primary text-4xl px-8 py-6"
+                  aria-label="Add UW Shuffle to Chrome - it's free"
+                >
+                  <FaChrome className="text-2xl" />
+                  Add to Chrome - it&apos;s free
+                </button>
+              </div>
+              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap">
                 Preview every swap
               </span>
             </div>
 
             <div className="flex justify-center flex-1">
-              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-4 transform -rotate-6">
+              <span className="px-8 py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-right transform -rotate-6 whitespace-nowrap">
                 Dodge bad profs
               </span>
             </div>
@@ -214,7 +208,7 @@ export default function Home() {
             className="absolute inset-0 z-0"
             style={{
               background:
-                "radial-gradient(125% 125% at 50% 10%, #fff 40%, #6366f1 100%)",
+                "radial-gradient(125% 125% at 50% 10%, #fff 40%, var(--color-primary) 100%)",
             }}
           />
 
