@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FaChrome } from "react-icons/fa";
+import { FaChrome, FaUsers, FaEye, FaShieldAlt } from "react-icons/fa";
 import { features } from "@/constants/features";
 import { headlines } from "@/constants/headlines";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -64,7 +64,8 @@ export default function Home() {
           </div>
           <div className="flex flex-col lg:flex-row items-center justify-between max-w-7xl w-full gap-6 lg:gap-10 px-4">
             <div className="flex justify-center flex-1 order-2 lg:order-1">
-              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-left transform rotate-3 lg:rotate-6 whitespace-nowrap">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-left transform rotate-3 lg:rotate-6 whitespace-nowrap flex items-center gap-2">
+                <FaUsers className="text-lg sm:text-xl lg:text-2xl" />
                 Plan with friends
               </span>
             </div>
@@ -80,13 +81,15 @@ export default function Home() {
                   Add to Chrome - it&apos;s free
                 </button>
               </div>
-              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap flex items-center gap-2">
+                <FaEye className="text-lg sm:text-xl lg:text-2xl" />
                 Preview every swap
               </span>
             </div>
 
             <div className="flex justify-center flex-1 order-3">
-              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-right transform -rotate-3 lg:-rotate-6">
+              <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-slide-in-right transform -rotate-3 lg:-rotate-6 flex items-center gap-2">
+                <FaShieldAlt className="text-lg sm:text-xl lg:text-2xl" />
                 Dodge bad profs
               </span>
             </div>
