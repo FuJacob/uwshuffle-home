@@ -281,13 +281,14 @@ body {
   inset: 0;
   background: radial-gradient(
     125% 125% at 50% 50%,
-    #fff 40%,
-    #ff6b6b 50%,
-    #feca57 60%,
-    #48dbfb 70%,
-    #ff9ff3 80%,
-    #54a0ff 90%,
-    #5f27cd 100%
+    #ffffff 30%,
+    #ffeef0 40%,
+    #fff4e6 50%,
+    #e6f7ff 60%,
+    #f9f0ff 70%,
+    #e6f4ff 80%,
+    #f0e6ff 90%,
+    #ffffff 100%
   );
   filter: blur(15px);
   border-radius: var(--radius-full);
