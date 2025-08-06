@@ -13,16 +13,16 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "UWShuffle - Quest. But Actually Usable.",
+  title: "UW Shuffle - making Quest easier to use",
   description:
     "The Chrome extension that transforms your UW course registration experience. No more refreshing, no more stress. Just seamless course selection.",
   keywords:
-    "UW, University of Washington, course registration, Quest, Chrome extension, UWShuffle",
-  authors: [{ name: "UWShuffle Team" }],
+    "UW, University of Waterloo, course registration, Quest, Chrome extension, UW Shuffle",
+  authors: [{ name: "UW Shuffle " }],
   openGraph: {
-    title: "UWShuffle - Quest. But Actually Usable.",
+    title: "UW Shuffle - making Quest easier to use",
     description:
-      "The Chrome extension that transforms your UW course registration experience.",
+      "Preview your schedule, plan with friends, dodge bad professors, and make your Quest experience easier.",
     type: "website",
   },
 };
@@ -34,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+      </head>
       <body className={`${gabarito.variable} ${outfit.variable} antialiased`}>
         {children}
       </body>
