@@ -6,7 +6,7 @@ export interface Headline {
 export const headlines: Headline[] = [
   {
     subtext: "If Quest is roommate having loud sex at 3 a.m.",
-    headline: "Then UW Shuffle is AirPods Pro 2.",
+    headline: "Then UW Shuffle is your headphones.",
   },
   {
     subtext: "If Quest is eating 6 lines of Lazeez.",
@@ -37,7 +37,7 @@ export const headlines: Headline[] = [
     headline: "Then UW Shuffle is the professor letting you in.",
   },
   {
-    subtext: "If Quest is Tinder date ghosting you.",
-    headline: "Then UW Shuffle is matching their friend.",
+    subtext: "If Quest is not being able to find a seat in DC.",
+    headline: "Then UW Shuffle is the open table in Davis Center.",
   },
 ];
