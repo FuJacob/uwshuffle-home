@@ -93,22 +93,16 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="px-0 sm:px-0 lg:px-0 relative z-10">
-          <div className="w-screen mx-auto my-0 sm:my-0 overflow-hidden shadow-none rounded-none">
-            <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full block pointer-events-none"
-              />
-            </div>
-          </div>
+        <div className="w-screen px-0 sm:px-0 lg:p-24 h-screen relative z-10">
+         <iframe
+            className="w-full h-full rounded-3xl"
+            src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0&loop=1&playlist=TtSnpr8bm3E"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
         <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-8 sm:py-16 animate-fade-in px-4">
           {features.map((feature, index) => (
