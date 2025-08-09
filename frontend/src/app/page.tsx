@@ -5,10 +5,7 @@ import { features } from "@/constants/features";
 import { headlines } from "@/constants/headlines";
 import { FeatureCard } from "@/components/FeatureCard";
 
-
-
 export default function Home() {
-
   const randomHeadline =
     headlines[Math.floor(Math.random() * headlines.length)];
 
@@ -96,16 +93,21 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="px-4 sm:px-8 lg:px-36 relative z-10">
-          <div className="w-full mx-auto my-8 sm:my-12 overflow-hidden shadow-lg rounded-2xl lg:rounded-3xl">
-            <video
-              src="/uwshuffle-demo.mp4"
-              autoPlay
-              loop
-              muted
-              className="w-full h-auto block"
-              aria-label="Demo video showing UW Shuffle in action"
-            />
+        <div className="px-0 sm:px-0 lg:px-0 relative z-10">
+          <div className="w-screen mx-auto my-0 sm:my-0 overflow-hidden shadow-none rounded-none">
+            <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full block pointer-events-none"
+              />
+            </div>
           </div>
         </div>
         <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-8 sm:py-16 animate-fade-in px-4">
