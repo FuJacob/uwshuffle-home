@@ -38,14 +38,16 @@ export default function Home() {
           </h1>
         </div>
         <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed">
-          <button
-            type="button"
+          <a
+            href="https://chromewebstore.google.com/detail/uw-shuffle-%E2%80%94-making-quest/ljigippjjlenfiofmbipieclkfcjfcop"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-surface flex items-center gap-1  text-text-primary  rounded-full text-base sm:text-lg px-3 sm:px-4 py-1.5 sm:py-2"
             aria-label="Add UW Shuffle to Chrome - it's free"
           >
             <FaChrome className="text-base sm:text-lg" />
             Add to Chrome
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -69,14 +71,16 @@ export default function Home() {
 
             <div className="flex flex-col items-center gap-4 sm:gap-6 order-1 lg:order-2">
               <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed">
-                <button
-                  type="button"
+                <a
+                  href="https://chromewebstore.google.com/detail/uw-shuffle-%E2%80%94-making-quest/ljigippjjlenfiofmbipieclkfcjfcop"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="uwshuffle-button-primary text-2xl sm:text-3xl lg:text-4xl px-6 sm:px-8 py-4 sm:py-6"
                   aria-label="Add UW Shuffle to Chrome - it's free"
                 >
                   <FaChrome className="text-xl sm:text-2xl" />
                   Add to Chrome - it&apos;s free
-                </button>
+                </a>
               </div>
               <span className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 bg-surface/50 backdrop-blur-md border border-border/50 rounded-full text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary hover:bg-surface-hover/50 transition-colors shadow-lg animate-fade-in-delayed-2 whitespace-nowrap flex items-center gap-2">
                 <FaEye className="text-lg sm:text-xl lg:text-2xl" />
@@ -94,7 +98,7 @@ export default function Home() {
         </section>
 
         <div className="w-screen px-0 sm:px-0 lg:p-24 h-screen relative z-10">
-         <iframe
+          <iframe
             className="w-full h-full rounded-3xl"
             src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0&loop=1&playlist=TtSnpr8bm3E"
             title="YouTube video player"
@@ -127,11 +131,10 @@ export default function Home() {
 
           <div className="flex flex-col items-center justify-center p-6 sm:p-8 lg:p-12 mx-4 sm:mx-8">
             <h3 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 text-text-primary animate-slide-up-delayed text-center px-4">
-              &ldquo;UWShuffle saved me hours of course planning!&rdquo;
+              &ldquo;UW Shuffle made using Quest so much faster!&rdquo;
             </h3>
             <p className="text-lg sm:text-xl lg:text-2xl mb-4 sm:mb-6 text-text-secondary animate-slide-up-delayed-2 text-center px-4">
-              Join thousands of UW students who have transformed their Quest
-              experience with instant conflict detection and professor insights.
+              Join thousands of University of Waterloo students who hate Quest.
             </p>
             <div className="uwshuffle-card p-2 sm:p-4 relative z-10">
               <Image
@@ -152,14 +155,16 @@ export default function Home() {
               </h2>
             </div>
             <div className="uwshuffle-button-gradient-bg animate-fade-in-delayed-2">
-              <button
-                type="button"
+              <a
+                href="https://chromewebstore.google.com/detail/uw-shuffle-%E2%80%94-making-quest/ljigippjjlenfiofmbipieclkfcjfcop"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="uwshuffle-button-primary text-xl sm:text-2xl px-6 sm:px-8 py-3 sm:py-4"
                 aria-label="Add UW Shuffle to Chrome - it's free"
               >
                 <FaChrome className="text-xl sm:text-2xl" />
                 Add to Chrome - it&apos;s free
-              </button>
+              </a>
             </div>
           </section>
           <footer className="py-6 sm:py-8 animate-slide-up max-w-7xl mx-auto px-4 sm:px-6 w-full">
