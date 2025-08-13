@@ -11,7 +11,7 @@ export const features: Feature[] = [
     title: "Smart Schedule Upload",
     description:
       "Intelligently parse your Quest schedule with automatic course detection and real-time validation.",
-    image: "/features/uploadschedule.png",
+    image: "/features/uploadSchedule.png",
   },
   {
     id: 2,
