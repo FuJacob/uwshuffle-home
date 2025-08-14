@@ -101,7 +101,7 @@ export default function Home() {
           <div className="w-full aspect-video lg:aspect-auto lg:h-full rounded-3xl overflow-hidden">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0&loop=1&playlist=TtSnpr8bm3E&t=64"
+              src="https://www.youtube.com/embed/TtSnpr8bm3E?si=Q-2JFKtsPLgIgKaG;start=64&autoplay=1&mute=1&rel=0&modestbranding=1&controls=0&disablekb=1&fs=0&loop=1&playlist=TtSnpr8bm3E"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
