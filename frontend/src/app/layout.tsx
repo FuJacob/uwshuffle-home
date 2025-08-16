@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gabarito, Outfit } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/next";
 const gabarito = Gabarito({
   variable: "--font-gabarito",
   subsets: ["latin"],
@@ -34,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Analytics />
       <head>
         <link rel="icon" type="image/svg+xml" href="/logo.svg" />
       </head>
