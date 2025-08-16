@@ -2,7 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaChrome, FaUsers, FaEye, FaShieldAlt } from "react-icons/fa";
+import {
+  FaChrome,
+  FaUsers,
+  FaEye,
+  FaShieldAlt,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 import { features } from "@/constants/features";
 import { headlines } from "@/constants/headlines";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -62,7 +69,7 @@ export default function Home() {
             <p className="text-text-secondary text-lg sm:text-xl lg:text-2xl xl:text-3xl tracking-tight leading-tight px-2 sm:px-4 max-w-4xl">
               {randomHeadline.subtext}
             </p>
-            <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-text-primary leading-none tracking-tighter px-2 sm:px-4">
+            <h2 className="text-4xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold text-text-primary leading-none tracking-tighter sm:px-4">
               {randomHeadline.headline}
             </h2>
           </div>
@@ -115,7 +122,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-8 sm:py-16 animate-fade-in px-4">
+        <section className="flex flex-col items-center justify-center max-w-7xl mx-auto w-full py-8 sm:py-16 animate-fade-in">
+          <h2 className="text-center text-3xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold text-text-primary leading-none tracking-tighter">
+            Umm... How do I use it?
+          </h2>
           {features.map((feature, index) => (
             <div
               key={feature.id}
@@ -189,10 +199,41 @@ export default function Home() {
                 </h4>
               </div>
 
-              <p className="text-xs sm:text-sm text-text-secondary">
-                &copy; {new Date().getFullYear()} UW Shuffle. All rights
-                reserved.
-              </p>
+              <div className="flex items-center gap-4">
+                <p className="text-xs sm:text-sm text-text-secondary">
+                  &copy; {new Date().getFullYear()} UW Shuffle. All rights
+                  reserved.
+                </p>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://linkedin.com/in/fujacob"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-text-primary hover:bg-gray-100 transition-colors shadow-sm"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin className="text-sm" />
+                  </a>
+                  <a
+                    href="https://x.com/fujacobb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-text-primary hover:bg-gray-100 transition-colors shadow-sm"
+                    aria-label="X (Twitter)"
+                  >
+                    <strong>𝕏</strong>
+                  </a>
+                  <a
+                    href="https://github.com/fujacob"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-text-primary hover:bg-gray-100 transition-colors shadow-sm"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub className="text-sm" />
+                  </a>
+                </div>
+              </div>
             </div>
           </footer>
         </div>
