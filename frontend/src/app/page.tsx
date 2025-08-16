@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaChrome, FaUsers, FaEye, FaShieldAlt } from "react-icons/fa";
 import { features } from "@/constants/features";
@@ -6,8 +8,11 @@ import { headlines } from "@/constants/headlines";
 import { FeatureCard } from "@/components/FeatureCard";
 
 export default function Home() {
-  const randomHeadline =
-    headlines[Math.floor(Math.random() * headlines.length)];
+  const [randomHeadline, setRandomHeadline] = useState(headlines[0]);
+
+  useEffect(() => {
+    setRandomHeadline(headlines[Math.floor(Math.random() * headlines.length)]);
+  }, []);
 
   return (
     <div className="min-h-screen w-full relative bg-white pt-8">
