@@ -109,7 +109,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="w-screen px-0 sm:px-0 lg:p-24 sm:py-24 h-auto lg:h-screen relative z-10">
+        <div className="w-screen px-0 sm:px-0 lg:p-24 py-12 h-auto lg:h-screen relative z-10">
           <div className="w-full aspect-video lg:aspect-auto lg:h-full rounded-3xl overflow-hidden">
             <iframe
               className="w-full h-full"
